@@ -22,7 +22,8 @@ describe('Aplicação contém um conjunto fixo de links  de navegação', () => 
   test('É redirecionado para a pagina Not Found', () => {
     const history = renderWithRouter(<App />);
     history.push('/*');
-    const notFound = screen.getByRole('heading', { name: 'Not Found', level: 1 });
+    const notFound = screen.getByRole('heading', {
+      name: /Page requested not found/i });
     expect(notFound).toBeInTheDocument();
   });
 });

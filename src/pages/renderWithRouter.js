@@ -10,5 +10,6 @@ const renderWithRouter = (component) =>{
             {component}
         </Router>
     )
+    return history;
 }
 export default renderWithRouter;
