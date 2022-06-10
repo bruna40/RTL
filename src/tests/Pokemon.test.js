@@ -30,7 +30,7 @@ describe('Teste componente 6, Pokemon', () => {
     const history = renderWithRouter(<App />);
     history.push('/pokemons/25');
 
-    const favorite = screen.getByRole('checkbox', { name: /pokémon favoritado\?/i });
+    const favorite = screen.getByRole('checkbox', { name: /pokémon favoritado?/i });
     userEvent.click(favorite);
     expect(favorite).toBeInTheDocument();
     const star = screen.getByAltText('Pikachu is marked as favorite');
